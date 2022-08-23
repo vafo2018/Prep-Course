@@ -1,0 +1,17 @@
+h1 {
+  color: aqua;
+}
+IMG {
+  width: 400px;
+}
+#thirdDIV{
+  background-color : cadetblue;
+  height:600px;
+  width: 500px;
+  padding: 50px;
+  border: 5px solid blue;
+}
+#spanId{
+  font-size : 15px;
+  margin: 50px;
+}
