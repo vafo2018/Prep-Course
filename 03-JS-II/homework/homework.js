@@ -100,6 +100,13 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero < 50 && numero > 20){
+    return true;
+  }else{
+    return false;
+  }
+
+
 }
 
 function esEntero(numero) {
@@ -110,6 +117,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if (Math.floor(numero) === 0){
+    return true;
+  }else{
+    return false;
+  }  
 }
 
 function fizzBuzz(numero) {
@@ -117,6 +129,24 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  var divx3 = false;
+  var divx5 = false;
+  if(numero % 3 === 0){
+    divx3 = true;
+  }
+  if(numero % 5 === 0){
+    divx3 = true;
+  }
+  if (divx3 === true && divx5 === false){
+    return "fizz";
+  }
+  if (divx3 === false && divx5 === true){
+    return "buzz";
+  }
+  if (divx3 === true && divx5 === true){
+    return "fizzbuzz";
+  }
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
