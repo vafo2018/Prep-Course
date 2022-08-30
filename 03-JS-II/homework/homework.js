@@ -35,10 +35,11 @@ function conection(status) {
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if(status === 1){
     return "Online";
-  }else if (status === 2){
+  }else if(status === 2){
     return "Away";
-  } 
-  return "Offline";
+  }else{  
+    return "Offline";
+  };
 }
 
 function saludo(idioma) {
@@ -198,6 +199,11 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+  if(valor === true){
+    return "Soy verdadero";
+  }else{
+    return "Soy falso";
+  }
 
 }
 
@@ -205,12 +211,24 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  
+  var tablade6 = [];
+  for (i = 0; i < 11; i++) {
+    tablade6.push(6 * i);
+  } 
+  return tablade6;
+   
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  var str = numero + "";
+  if (str.length === 3){
+    return true;
+  }else{
+    return false;
+  }
+
   
 }
 
