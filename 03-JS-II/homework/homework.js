@@ -23,9 +23,7 @@ function mayoriaDeEdad(edad) {
     }else{
      return "Not allowed";
     }
- 
 }
-
   
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
@@ -199,12 +197,12 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+
   if(valor === true){
     return "Soy verdadero";
   }else{
     return "Soy falso";
   }
-
 }
 
 function tablaDelSeis(){
@@ -236,6 +234,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
+  var pasadas = 0;
+  var sumatoria = numero; 
+  do{
+    sumatoria = sumatoria + 5;
+    pasadas = pasadas + 1;
+  }while(pasadas < 8)
+  return sumatoria;
 }
 
 
