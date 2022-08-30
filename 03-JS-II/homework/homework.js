@@ -162,11 +162,11 @@ function operadoresLogicos(num1, num2, num3) {
   if (num1 < 0 || num2 < 0 || num3 < 0){
     return "Hay negativos";
   }
-  if (num3 > num1 || num3 > mum2){
+  if (num3 > num1 || num3 > num2){
     var nuevonum3 = nuevonum3 + 1;
-    retur;
+    return;
   }
-  if (num1 === 0 || num2 === 0 || num3 = 0){
+  if (num1 === 0 || num2 === 0 || num3 === 0){
     return "Error";
   }
   return false;
