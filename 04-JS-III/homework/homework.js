@@ -18,8 +18,8 @@ function devolverUltimoElemento(array) {
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  var largoarray = array.length;
-  return largoarray;
+  var largarray = array.length;
+  return largarray;
 }
 
 
@@ -28,6 +28,10 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+    for (i = 0; i < array.length; i++) {
+      array[i] = array[i] + 1;
+    }  
+          
 }
 
 
