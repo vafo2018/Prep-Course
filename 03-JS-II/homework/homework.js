@@ -23,9 +23,7 @@ function mayoriaDeEdad(edad) {
     }else{
      return "Not allowed";
     }
- 
 }
-
   
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
@@ -35,10 +33,11 @@ function conection(status) {
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if(status === 1){
     return "Online";
-  }else if (status === 2){
+  }else if(status === 2){
     return "Away";
-  } 
-  return "Offline";
+  }else{  
+    return "Offline";
+  };
 }
 
 function saludo(idioma) {
@@ -159,6 +158,7 @@ function operadoresLogicos(num1, num2, num3) {
   if (num1 > num2 && num1 > num3 && num1 > 0){
     return "Número 1 es mayor y positivo";
   }
+<<<<<<< HEAD
   if (num1 < 0 || num2 < 0 || num3 < 0 || ){
     return "Hay negativos";
   }
@@ -170,6 +170,20 @@ function operadoresLogicos(num1, num2, num3) {
     return "Hay negativos";
   }
   return false;
+=======
+  if (num1 < 0 || num2 < 0 || num3 < 0){
+    return "Hay negativos";
+  }
+  if (num3 > num1 || num3 > num2){
+    var nuevonum3 = nuevonum3 + 1;
+    return;
+  }
+  if (num1 === 0 || num2 === 0 || num3 === 0){
+    return "Error";
+  }
+  return false;
+ 
+>>>>>>> e5e4af0bf0975080262531e756f698fae4e5271d
 }
 
 function esPrimo(numero) {
