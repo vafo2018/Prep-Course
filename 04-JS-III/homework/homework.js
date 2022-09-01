@@ -79,10 +79,10 @@ function arrayContiene(array, elemento) {
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
   var existe = false;
-  for (let index = 0; index < array.length; index++) {
+  for (let i = 0; i < array.length; i++) {
     if(array[i] === elemento){
       existe = true;
-      index = array.length;
+      i = array.length;
     }  
   }
   return existe;
@@ -93,6 +93,12 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var suma = 0;
+    for (let index = 0; index < numeros.length; index++) {
+      suma = suma + numeros[index];
+    }
+    return suma;
+  
 }
 
 
@@ -100,6 +106,13 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  var suma = 0;
+  var promedio = 0;
+    for (let index = 0; index < resultadosTest.length; index++) {
+      suma = suma + resultadosTest[index];
+    }
+  promedio = suma / resultadosTest.length;  
+  return promedio;
 }
 
 
@@ -107,20 +120,41 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var masgrande = 0;
+  for (let index = 0; index < numeros.length; index++) {
+    if(numeros[index] > masgrande){
+       masgrande = numeros[index];
+    }  
+  }
+  return masgrande;
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+var producto = 1;  
+if(arguments.length === 0){
+  return 0;
+}
+for (let index = 0; index < arguments.length; index++) {
+  producto = producto * arguments[index] ;
+}
+return producto;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var cantelementos = 0;
+  for (let index = 0; index < arreglo.length; index++) {
+    if(arreglo[index] > 18){
+      cantelementos = cantelementos + 1;
+    }  
+  }
+  return cantelementos;
 }
 
 
@@ -129,7 +163,11 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+
+  if(numeroDeDia === 2 || numeroDeDia === 3 || numeroDeDia === 4 ||numeroDeDia === 5 || numeroDeDia === 6){
+    return "Es dia Laboral";
+  }
+  return "Es fin de semana";
 } 
 
 
