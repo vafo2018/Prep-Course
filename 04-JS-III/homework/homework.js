@@ -176,13 +176,27 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   
+  var convstring = n.toString();
+  if(convstring[0] === "9" )
+    return true;
+  else{
+    return false;
+  }  
 }
-
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí
+  var todosiguales = true;
+  for (let index = 0; index < arreglo.length; index++) {
+    if (index < arreglo.length){
+       if(arreglo[index] !== arreglo[index + 1]){
+         todosiguales = false;
+       }
+    }
+  return todosiguales;  
+  }
   
 } 
 
@@ -192,6 +206,29 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  
+  var mesenero = 0;
+  var mesmarzo = 0;
+  var mesnoviembre = 0;
+  var nuevoarray = [];
+
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] === "Enero"){
+       mesenero = 1;
+       nuevoarray.push(array[index]);
+    }else if (array[index] === "Marzo"){
+      mesmarzo = 1;
+      nuevoarray.push(array[index]);
+    }else if (array[index] === "Noviembre"){
+      mesnoviembre = 1;
+      nuevoarray.push(array[index]);
+    }
+  }
+  if (mesenero === 1 && mesmarzo === 1 && mesnoviembre === 1){
+    return nuevoarray;
+  }else{
+    return "No se encontraron los meses pedidos";
+  }
 }
 
 
@@ -199,6 +236,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var nuevoarray = [];
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] > 100 && array[index]!== 100){
+      nuevoarray.push(array[index]);
+    }
+  }
+  return nuevoarray;  
 }
 
 
@@ -210,6 +254,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+   var array = [];
+   var cont = 0;
+  for (var index = 1; index <= 10; index++) {
+    numero = numero + 2;   
+    array.push(numero);
+    cont = index;
+    if(cont === numero){
+      break;
+    }
+  }
+  if  (cont === numero){
+    return "Se interrumpió la ejecución";
+  }else{
+    return array;
+  }  
 }
 
 
